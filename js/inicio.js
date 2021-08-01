@@ -15,6 +15,7 @@ const config ={
 	}
 }
 
+var mario;
 
 var game = new Phaser.Game(config);
 
@@ -24,7 +25,7 @@ function preload(){
 }
 function create(){
 
-	var mario = this.physics.add.image(200, 300, 'mario').setScale(0.25);
+	mario = this.physics.add.image(200, 300, 'mario').setScale(0.25);
 
 	var block = this.physics.add.staticImage(600, 300, 'block');
 
@@ -34,9 +35,11 @@ function create(){
     {
         marioOnBlock.body.stop();
 
-        this.physics.world.removeCollider(collider);
+        this.physics.world.rfemoveCollider(collider);
     }, null, this);
 }
 function update(time,delta){
+	//FAMILIA PLUCHE
+
 	
 }
